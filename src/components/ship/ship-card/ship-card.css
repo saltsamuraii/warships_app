@@ -1,0 +1,18 @@
+.ship_card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--light-white);
+    cursor: pointer;
+}
+
+.ship_card:hover {
+    transition: background-color .3s ease-in-out;
+    background-color: var( --light-grey);
+    opacity: .7;
+}
+
+.ship_image {
+    width: 100%;
+    max-width: fit-content;
+    height: auto;
+}

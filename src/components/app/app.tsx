@@ -1,8 +1,10 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { SearchBar } from '../search-bar';
 import { ErrorBoundary } from '../error-boundary';
+import { ShipList } from '../ship/ship-list';
 
 import './app.css';
+
 
 export default function App() {
   // const [data, setData] = useState({});
@@ -51,6 +53,7 @@ export default function App() {
         onSubmit={handleSubmit}
         onSearchShip={handleSearchShip}
       />
+      <ShipList/>
     </ErrorBoundary>
   );
 }
