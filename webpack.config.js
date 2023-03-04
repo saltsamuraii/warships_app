@@ -54,13 +54,27 @@ module.exports = {
             title: "WG-test",
             template: path.resolve(__dirname, "public/index.html"),
             filename: "index.html",
-            base: '/'
+            base: '',
         }),
         new MiniCssExtractPlugin({
             filename: "style.css"
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new FaviconsWebpackPlugin('public/favicon.ico')
+        new FaviconsWebpackPlugin({
+            logo: path.resolve(__dirname, "public/wow.png"),
+            inject: true,
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: true,
+                favicons: true,
+                firefox: true,
+                opengraph: true,
+                twitter: true,
+                windows: true
+              }
+        },
+        ),
     ],
     devServer: {
         static: path.resolve(__dirname, "dist"),

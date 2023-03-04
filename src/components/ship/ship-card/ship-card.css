@@ -1,0 +1,31 @@
+.ship_card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--border-default);
+}
+
+.ship_card:hover {
+    box-shadow: 0 0 2px var(--light-white);
+}
+
+.ship_info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ship_name {
+    color: var(--light-white)
+}
+
+.ship_type {
+    color: var(--light-white)
+}
+
+.ship_image {
+    width: 100%;
+    max-width: fit-content;
+    height: auto;
+}
