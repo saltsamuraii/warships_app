@@ -1,12 +1,15 @@
 :root {
     --black-color: #000;
-    --white-color: #fff;
+    --border-default: #3c4043;
     --dark-grey: #202124;
+    --focus-default: #8ab4f8;
+    --input-grey: #303134;
+    --input-light-grey: #323336;
     --light-grey: #818181;
     --light-purple: #bb86fc;
-    --teal: #03dac5;
     --light-white: #e8eaed;
-    --input-grey: #303134;;
+    --teal: #03dac5;
+    --white-color: #fff;
 }
 
 

@@ -40,6 +40,10 @@ export default function App() {
     console.log('est probitie');
   };
 
+  const handleReset = (event: FormEvent<HTMLFormElement>): void => {
+    setSearchShip('');
+  }
+
   const handleSearchShip = ({
     target: { value },
   }: ChangeEvent<HTMLInputElement>): void => {
@@ -52,6 +56,7 @@ export default function App() {
         ship={searchShip}
         onSubmit={handleSubmit}
         onSearchShip={handleSearchShip}
+        onReset={handleReset}
       />
       <ShipList/>
     </ErrorBoundary>

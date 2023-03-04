@@ -1,14 +1,27 @@
 .ship_card {
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--light-white);
     cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--border-default);
 }
 
 .ship_card:hover {
-    transition: background-color .3s ease-in-out;
-    background-color: var( --light-grey);
-    opacity: .7;
+    box-shadow: 0 0 2px var(--light-white);
+}
+
+.ship_info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ship_name {
+    color: var(--light-white)
+}
+
+.ship_type {
+    color: var(--light-white)
 }
 
 .ship_image {

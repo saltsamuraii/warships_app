@@ -1,14 +1,18 @@
 import React, { ChangeEvent, FormEvent } from 'react';
 
+import searchIcon from '../assets/search-icon.svg';
+import crossIcon from '../assets/cross-icon.svg';
 import './search-bar.css';
 
 interface SearchBarProps {
   ship: string;
   onSearchShip: (event: ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  onReset: (event: FormEvent<HTMLFormElement>) => void;
 }
 
 export default function SearchBar({
+  onReset,
   onSubmit,
   ship,
   onSearchShip,
@@ -24,7 +28,25 @@ export default function SearchBar({
           type="text"
           placeholder="Search..."
         />
-        <button type="submit">Search</button>
+        {ship.length > 0 ? (
+          <button className="search_input-clear">
+            <img
+              src={crossIcon}
+              alt="crossIcon"
+            />
+          </button>
+        ) : (
+          <button
+            className="search_input-button"
+            type="submit"
+          >
+            <img
+              src={searchIcon}
+              alt="searchIcon"
+            />
+          </button>
+        )}
+
         {/* <div className="filters">
         <fieldset>
           <legend>Search by filters</legend>

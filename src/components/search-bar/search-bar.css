@@ -1,11 +1,11 @@
 form {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 15px auto;
 }
 
 .title {
-    color: var(--light-white)
+  color: var(--light-white);
 }
 
 .search_input {
@@ -21,6 +21,22 @@ form {
   background: var(--input-grey);
 }
 
+.search_input:hover {
+  transition: .2s linear;
+  background: var(--input-light-grey);
+}
+
+.search_input:focus {
+  box-shadow: 0 0 3px var(--focus-default);
+}
+
+.search_input-button, 
+.search_input-clear {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
 legend {
   font-weight: bold;
   text-transform: uppercase;
@@ -32,20 +48,4 @@ legend {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-}
-
-button {
-  width: 100px;
-  height: auto;
-  cursor: pointer;
-  color: var(--black-color);
-  font-weight: bold;
-  border: none;
-  border-radius: 20px;
-  background-color: var(--light-white);
-}
-
-button:hover {
-  transition: .2s linear;
-  background-color: var(--light-purple);
 }

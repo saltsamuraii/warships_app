@@ -61,7 +61,7 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new FaviconsWebpackPlugin({
-            logo: path.resolve(__dirname, "public/icon.png"),
+            logo: path.resolve(__dirname, "public/wow.png"),
             inject: true,
             icons: {
                 android: true,
