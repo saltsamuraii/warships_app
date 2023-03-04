@@ -22,7 +22,7 @@ form {
 }
 
 .search_input:hover {
-  transition: .2s linear;
+  transition: 0.2s linear;
   background: var(--input-light-grey);
 }
 
@@ -30,7 +30,7 @@ form {
   box-shadow: 0 0 3px var(--focus-default);
 }
 
-.search_input-button, 
+.search_input-button,
 .search_input-clear {
   cursor: pointer;
   border: none;

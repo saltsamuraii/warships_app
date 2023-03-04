@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { MouseEventHandler, useCallback } from 'react';
+import { Ship } from '../ship';
+import { ShipDetails } from '../ship-details';
 
 import './ship-card.css'
 
-const shipsLink = "https://glossary-wows-global.gcdn.co/icons/vehicle/large/PGSC517_83a5cc53dcf088f35c9670eca9cdccfd48533017da1dfd16f97cf83aa00ca61b.png"
+type ShipCardPros = {
+  shipId: string;
+  ship: Ship,
+}
 
-export default function ShipCard() {
+export default function ShipCard({ shipId, ship }: ShipCardPros) {
+
   return (
     <div className="ship_card">
       <img
         className="ship_image"
-        src={shipsLink}
+        src={`https://glossary-wows-global.gcdn.co/icons/${ship.icons.medium}`}
         alt="ship_icon"
       />
-      <div className="ship_info">
-        <h2 className="ship_name">PGSC517</h2>
-        <p className="ship_type">Sedan</p>
+      <div className="ship_info" >
+        <h2 className="ship_name">{ship.name.split('_').join(' ')}</h2>
+        <p className="ship_name">{ship.localization.shortmark.en}</p>
+        <p className="ship_name">{ship.nation.toUpperCase()}</p>
       </div>
     </div>
   );
