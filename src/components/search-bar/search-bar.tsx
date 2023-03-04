@@ -7,8 +7,8 @@ import './search-bar.css';
 interface SearchBarProps {
   ship: string;
   onSearchShip: (event: ChangeEvent<HTMLInputElement>) => void;
+  onReset: (event: ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
-  onReset: (event: FormEvent<HTMLFormElement>) => void;
 }
 
 export default function SearchBar({
@@ -18,7 +18,7 @@ export default function SearchBar({
   onSearchShip,
 }: SearchBarProps) {
   return (
-    <>
+    <header className='header'>
       <h1 className="title">World of Warships</h1>
       <form onSubmit={onSubmit}>
         <input
@@ -29,7 +29,7 @@ export default function SearchBar({
           placeholder="Search..."
         />
         {ship.length > 0 ? (
-          <button className="search_input-clear">
+          <button type='reset' className="search_input-clear" onClick={onReset}>
             <img
               src={crossIcon}
               alt="crossIcon"
@@ -55,6 +55,6 @@ export default function SearchBar({
         </fieldset>
       </div> */}
       </form>
-    </>
+    </header>
   );
 }
