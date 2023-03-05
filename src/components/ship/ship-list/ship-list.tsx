@@ -11,9 +11,7 @@ type ShipListProps = {
   isLoading: boolean;
 };
 
-export default function ShipList() {
-  const { isLoading, ships } = useShips();
-
+export default function ShipList({ships, isLoading}: ShipListProps) {
   if (ships.length <= 0 && isLoading) return <h1>Loading...</h1>;
 
   return (

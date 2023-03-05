@@ -27,6 +27,7 @@ export default function ShipCard({ ship }: ShipCardPros) {
         className="ship_card-image"
         src={`https://glossary-wows-global.gcdn.co/icons/${medium}`}
         alt="ship_icon"
+        role="presentation"
       />
       <div className="ship_card-info">
         <h2 className="ship_card-name">{name.split('_').join(' ')}</h2>

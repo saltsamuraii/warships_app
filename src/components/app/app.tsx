@@ -6,12 +6,10 @@ import { Ship } from '../ship/ship';
 import headerIcon from '../assets/header-icon.svg';
 import './app.css';
 import { getShips } from '../../helpers/getShips';
+import useShips from '../hooks/useShips';
 
 export default function App() {
-  const [ships, setShips] = useState<Ship[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
- 
+  const { isLoading, ships } = useShips();
 
   return (
     <ErrorBoundary>
@@ -22,7 +20,7 @@ export default function App() {
         />
         <h1>World of Warships</h1>
       </div>
-      <ShipList />
+      <ShipList isLoading={isLoading} ships={ships} />
     </ErrorBoundary>
   );
 }
