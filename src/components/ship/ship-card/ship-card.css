@@ -1,18 +1,47 @@
+.ship_card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  cursor: pointer;
+  list-style: none;
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-default);
+  overflow: hidden;
+}
+
+.ship_card:hover {
+  border: 1px solid var(--light-white);
+  transition: 0.2s linear;
+}
+
+.ship_card-description {
+  display: none;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+  top: -16px;
+  left: 0;
+  right: 0;
+  color: var(--light-white);
+  backdrop-filter: blur(30px);
+  opacity: 1;
+}
+
+.ship_card:hover .ship_card-description {
+  display: flex;
+  align-items: center;
+}
+
 .ship_card-info {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-/* .ship_card-info:hover {
-  filter: blur(5px);
-  box-shadow: 0 0 2px var(--light-white);
-} */
-
 .ship_card-image {
-  width: 100%;
-  max-width: fit-content;
-  height: auto;
+  width: 435px;
+  align-self: center;
 }
 
 .ship_card-name,
