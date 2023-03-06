@@ -1,1 +1,0 @@
-export { default as ShipDetails } from './ship-details';

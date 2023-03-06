@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { LazyImage } from '../../lazy-image';
 import { Ship } from '../ship';
 
 import './ship-card.css';
 
-type ShipCardPros = {
+interface ShipCardPros {
   ship: Ship;
-};
+}
 
 export default function ShipCard({ ship }: ShipCardPros) {
   const [imageError, setImageError] = useState(true);
@@ -21,32 +22,33 @@ export default function ShipCard({ ship }: ShipCardPros) {
   const {
     name,
     nation,
-    icons: { medium },
+    icons,
     localization: {
-      description: { ru },
+      description,
       shortmark: { en },
     },
   } = ship;
 
-  //const imgSrc = !imageError ? 'https://allmovies.tube/assets/img/no-poster.png' : `https://glossary-wows-global.gcdn.co/icons/${medium}`;
+  const imgSrc = !imageError
+    ? 'https://mtek3d.com/wp-content/uploads/2018/01/image-placeholder-500x500.jpg'
+    : `https://glossary-wows-global.gcdn.co/icons/${icons.large}`;
 
   return (
-    <>
-      <img
+    <li className="ship_card">
+      <h2 className="ship_card-name">{name.split('_').join(' ')}</h2>
+      <LazyImage
         className="ship_card-image"
         onError={handleErrorImage}
-        src={`https://glossary-wows-global.gcdn.co/icons/${medium}`}
+        src={imgSrc}
         alt="ship_icon"
-        role="presentation"
       />
       <div className="ship_card-info">
-        <div className="test">
-          <h2 className="ship_card-name">{name.split('_').join(' ')}</h2>
-          <p className="ship_card-shortmark">{en}</p>
-          <p className="ship_card-nation">{nation.toUpperCase()}</p>
-        </div>
-        <p className="ship_card-description">{ru}</p>
+        <p className="ship_card-shortmark">{en}</p>
+        <p className="ship_card-nation">{nation.toUpperCase()}</p>
+        <p className="ship_card-description">
+          {description.en}
+        </p>
       </div>
-    </>
+    </li>
   );
 }

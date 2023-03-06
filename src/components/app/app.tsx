@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ErrorBoundary } from '../error-boundary';
 import { ShipList } from '../ship/ship-list';
-import { ShipDetails } from '../ship/ship-details';
+import { LazyImage } from '../lazy-image';
+import useShips from '../hooks/useShips';
 
 import './app.css';
 import headerIcon from '../assets/header-icon.svg';
-import useShips from '../hooks/useShips';
 
 export default function App() {
-  const [shipId, setShipId] = useState<string | undefined>(undefined);
- 
+  const { isLoading, ships } = useShips();
 
   return (
     <ErrorBoundary>
-      <div>
-        <img
+      <header className="header">
+        <LazyImage
+          className="header_icon"
           src={headerIcon}
           alt="header-icon"
         />
         <h1>World of Warships</h1>
-      </div>
-          <ShipList/>
-
+      </header>
+      <ShipList
+        ships={ships}
+        isLoading={isLoading}
+      />
     </ErrorBoundary>
   );
 }
