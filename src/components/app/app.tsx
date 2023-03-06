@@ -1,15 +1,15 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ErrorBoundary } from '../error-boundary';
 import { ShipList } from '../ship/ship-list';
-import { Ship } from '../ship/ship';
+import { ShipDetails } from '../ship/ship-details';
 
-import headerIcon from '../assets/header-icon.svg';
 import './app.css';
-import { getShips } from '../../helpers/getShips';
+import headerIcon from '../assets/header-icon.svg';
 import useShips from '../hooks/useShips';
 
 export default function App() {
-  const { isLoading, ships } = useShips();
+  const [shipId, setShipId] = useState<string | undefined>(undefined);
+ 
 
   return (
     <ErrorBoundary>
@@ -20,7 +20,8 @@ export default function App() {
         />
         <h1>World of Warships</h1>
       </div>
-      <ShipList isLoading={isLoading} ships={ships} />
+          <ShipList/>
+
     </ErrorBoundary>
   );
 }

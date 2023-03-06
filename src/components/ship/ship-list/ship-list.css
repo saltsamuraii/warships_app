@@ -1,12 +1,30 @@
 .ship_list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 0 0;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0 0;
+  padding: 0;
 }
 
-.ship_list_item {
-    list-style: none;
-    margin: 10px;
+.ship_list-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  list-style: none;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-default);
+}
+
+.ship_list-item:hover {
+    filter: blur(5px);
+}
+
+.ship_card-description {
+    opacity: 0;
+}
+
+.ship_list-item:hover .ship_card-description {
+    opacity: 1;
+    filter: none;
 }

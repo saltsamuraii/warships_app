@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getShips } from '../../helpers/getShips';
 import { Ship } from '../ship/ship';
 
