@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ErrorBoundary } from '../error-boundary';
 import { ShipList } from '../ship/ship-list';
 import { LazyImage } from '../lazy-image';

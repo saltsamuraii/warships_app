@@ -4,15 +4,16 @@ import ShipList from './ship-list';
 import { Ship } from '../ship';
 
 describe('ShipList', () => {
-    let ships: Ship[];
-    beforeEach(() => {
-        ships = [{
+  let ships: Ship[];
+  beforeEach(() => {
+    ships = [
+      {
         id: '1',
-        name: 'ship name',
-        nation: 'US',
+        name: 'ship name 1',
+        nation: 'us',
         tags: [],
         level: 5,
-    
+
         icons: {
           local_contour: 'string',
           contour_alive: 'string',
@@ -90,14 +91,14 @@ describe('ShipList', () => {
             zh_tw: 'string',
           },
         },
-      }, 
+      },
       {
         id: '2',
-        name: 'ship name2',
-        nation: 'RU',
+        name: 'ship name 2',
+        nation: 'russia',
         tags: [],
         level: 5,
-    
+
         icons: {
           local_contour: 'string',
           contour_alive: 'string',
@@ -175,21 +176,27 @@ describe('ShipList', () => {
             zh_tw: 'string',
           },
         },
-      }];
-      
-    });
-  it('displays a loading message when ships equal null', () => {
+      },
+    ];
+  });
+
+  it('should display a loading message when ships equal null', () => {
     render(<ShipList ships={[]} isLoading />);
 
     expect(screen.getByText('Loading...')).toBeInTheDocument();
   });
 
-  it('displays the list of ships', () => {
-    render(<ShipList ships={ships} isLoading={false} />);
+  it('should display no ships message when ships length equal null', () => {
+    render(<ShipList ships={[]} isLoading={false} />);
 
-    expect(screen.getAllByRole('listitem')).toHaveLength(2);
-    expect(screen.getByText('RU')).toBeInTheDocument();
+    expect(screen.getByText('No ships found...')).toBeInTheDocument();
+  });
+
+  it('should display nation of the ships', () => {
+    render(<ShipList ships={ships} isLoading={false}/>);
+
+    expect(screen.getByText('RUSSIA')).toBeInTheDocument();
+    expect(ships.length).toBe(2);
+    expect(screen.getByText('US')).toBeInTheDocument();
   });
 });
-
-

@@ -20,7 +20,7 @@ describe('ShipCard', () => {
         default: 'string',
         local_small: 'string',
         contour_dead: 'string',
-        large: 'string',
+        large: 'large_image',
         local_contour_dead: 'string',
         local_contour_alive: 'string',
         small: 'string',
@@ -92,7 +92,7 @@ describe('ShipCard', () => {
       },
     };
   });
-  it('displays the ship name, description, and nation', () => {
+  it('should displays the ship name, description, and nation', () => {
     render(<ShipCard ship={shipData} />);
 
     expect(screen.getByText('ship name')).toBeInTheDocument();
@@ -100,11 +100,11 @@ describe('ShipCard', () => {
     expect(screen.getByText('US')).toBeInTheDocument();
   });
 
-  it('does ', () => {
+  it('should show the image has a right link parameter', () => {
     render(<ShipCard ship={shipData} />);
     expect(screen.getByRole('presentation')).toHaveAttribute(
       'src',
-      'https://glossary-wows-global.gcdn.co/icons/medium_image'
+      'https://glossary-wows-global.gcdn.co/icons/large_image'
     );
   });
 });

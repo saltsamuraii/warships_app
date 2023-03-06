@@ -41,6 +41,5 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
-    },
-    "include": ["./.eslintrc.json"]
+    }
 }
