@@ -2,12 +2,10 @@ import React from 'react';
 import { Ship } from '../ship';
 
 type ShipCardPros = {
-  shipId: string;
   ship: Ship;
 };
 
-export default function ShipDetails({ shipId, ship }: ShipCardPros) {
-
+export default function ShipDetails({ ship }: ShipCardPros) {
   return (
     <div className="ship_card">
       <img

@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    list-style: none;
+    margin: 10px;
     border-radius: 10px;
     border: 1px solid var(--border-default);
 }
@@ -10,22 +12,21 @@
     box-shadow: 0 0 2px var(--light-white);
 }
 
-.ship_info {
+.ship_card-info {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.ship_name {
-    color: var(--light-white)
-}
-
-.ship_type {
-    color: var(--light-white)
-}
-
-.ship_image {
+.ship_card-image {
     width: 100%;
     max-width: fit-content;
     height: auto;
 }
+
+.ship_card-name,
+.ship_card-description, 
+.ship_card-nation {
+    color: var(--light-white)
+}
+

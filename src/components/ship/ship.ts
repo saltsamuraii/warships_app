@@ -1,5 +1,5 @@
 export interface Ship {
-  id: string;
+  id?: string | undefined;
   name: string;
   nation: string;
   tags: string[];
@@ -83,4 +83,4 @@ export interface Ship {
       zh_tw: string;
     };
   };
-};
+}
