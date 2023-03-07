@@ -181,19 +181,34 @@ describe('ShipList', () => {
   });
 
   it('should display a loading message when ships equal null', () => {
-    render(<ShipList ships={[]} isLoading />);
+    render(
+      <ShipList
+        ships={[]}
+        isLoading
+      />
+    );
 
     expect(screen.getByText('Loading...')).toBeInTheDocument();
   });
 
   it('should display no ships message when ships length equal null', () => {
-    render(<ShipList ships={[]} isLoading={false} />);
+    render(
+      <ShipList
+        ships={[]}
+        isLoading={false}
+      />
+    );
 
     expect(screen.getByText('No ships found...')).toBeInTheDocument();
   });
 
   it('should display nation of the ships', () => {
-    render(<ShipList ships={ships} isLoading={false}/>);
+    render(
+      <ShipList
+        ships={ships}
+        isLoading={false}
+      />
+    );
 
     expect(screen.getByText('RUSSIA')).toBeInTheDocument();
     expect(ships.length).toBe(2);

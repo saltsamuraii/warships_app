@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Ship } from '../ship';
 import { ShipCard } from '../ship-card';
 import { Pagination } from '../../pagination';
+
 import './ship-list.css';
 
 interface ShipListProps {
@@ -27,7 +28,7 @@ export default function ShipList({ ships, isLoading }: ShipListProps) {
   };
 
   if (isLoading) return <h1>Loading...</h1>;
-  if (ships.length <= 0) return <h2>No ships found...</h2>;
+  if (displayedShips.length <= 0) return <h2>No ships found...</h2>;
 
   return (
     <section className="ship_list_container">

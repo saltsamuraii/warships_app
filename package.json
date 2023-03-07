@@ -19,7 +19,7 @@
     "lintFix": "eslint ./src/**/*.{ts,tsx} --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kirill",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "7.21.0",
@@ -70,6 +70,7 @@
   "dependencies": {
     "normalize.css": "8.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-switch": "7.0.0"
   }
 }

@@ -45,9 +45,7 @@ export default function ShipCard({ ship }: ShipCardPros) {
       <div className="ship_card-info">
         <p className="ship_card-shortmark">{en}</p>
         <p className="ship_card-nation">{nation.toUpperCase()}</p>
-        <p className="ship_card-description">
-          {description.en}
-        </p>
+        <p className="ship_card-description">{description.en}</p>
       </div>
     </li>
   );

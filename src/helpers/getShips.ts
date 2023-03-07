@@ -1,6 +1,6 @@
-import { ROUTE } from "../enums/enum-routes";
+import { ROUTE } from '../enums/enum-routes';
 
-export function getShips()  {
+export function getShips() {
   return fetch(ROUTE.URL)
     .then((response) => {
       if (!response.ok) {

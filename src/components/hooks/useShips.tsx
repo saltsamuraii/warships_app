@@ -8,10 +8,10 @@ export default function useShips() {
 
   useEffect(() => {
     getShips().then((data) => {
-      setIsLoading(!isLoading);
       setShips(data);
+      setIsLoading(false);
     });
-  }, [ isLoading ]);
+  }, []);
 
   const formatedShips = Object.entries(ships).map(([id, { ...rest }]) => ({
     id,

@@ -12,6 +12,7 @@
 
 .ship_card:hover {
   border: 1px solid var(--light-white);
+  background-color: var(--light-white);
   transition: 0.2s linear;
 }
 
@@ -31,6 +32,7 @@
 .ship_card:hover .ship_card-description {
   display: flex;
   align-items: center;
+  color: var(--dark-grey);
 }
 
 .ship_card-info {

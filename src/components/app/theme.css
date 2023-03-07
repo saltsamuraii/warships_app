@@ -1,0 +1,59 @@
+.dark {
+  overflow: hidden;
+  background-color: var(--dark-grey);
+}
+
+/* Light theme styles */
+.light {
+  overflow: hidden;
+  background-color: var(--light-white);
+}
+
+.light h1 {
+  color: var(--dark-grey);
+}
+
+/* Ship card */
+.light .ship_card {
+  border: 1px solid var(--border-default);
+}
+
+.light .ship_card:hover {
+  background-color: var(--dark-grey);
+  border: 1px solid var(--dark-grey);
+}
+
+.light .ship_card:hover .ship_card-description {
+  color: var(--light-white);
+}
+
+.light .ship_card-name {
+  color: var(--dark-grey);
+}
+
+.light .ship_card-shortmark {
+  color: var(--dark-grey);
+}
+
+.light .ship_card-nation {
+  color: var(--dark-grey);
+}
+
+/* Pagination */
+.light .pagination li a {
+  border-color: var(--light-white);
+  color: var(--dark-grey);
+}
+
+.light .pagination li.active a {
+  border-color: var(--dark-grey);
+}
+
+.light .pagination li:hover a {
+  border-color: var(--dark-grey);
+}
+
+/* Theme switcher */
+.light .theme_switch {
+  border-color: var(--dark-grey);
+}
