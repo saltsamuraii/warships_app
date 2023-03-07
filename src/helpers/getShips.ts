@@ -1,7 +1,7 @@
 import { ROUTE } from '../enums/enum-routes';
 
 export function getShips() {
-  return fetch(ROUTE.URL)
+  return fetch(ROUTE.CORS_ALLOW + ROUTE.URL)
     .then((response) => {
       if (!response.ok) {
         throw new Error(
