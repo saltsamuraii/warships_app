@@ -1,11 +1,9 @@
 .dark {
-  overflow: hidden;
   background-color: var(--dark-grey);
 }
 
 /* Light theme styles */
 .light {
-  overflow: hidden;
   background-color: var(--light-white);
 }
 
