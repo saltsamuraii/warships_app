@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
 
-import './pagination.css'
+import './pagination.css';
 
 interface PaginationProps {
-    pageCount: number;
-    onPageChange: (page: number) => void;
+  pageCount: number;
+  onPageChange: (page: number) => void;
 }
 
 export default function Pagination({
@@ -22,14 +22,14 @@ export default function Pagination({
       previousAriaLabel="prev"
       pageCount={pageCount}
       onPageChange={handlePageChange}
-      containerClassName='pagination'
-      activeClassName='active'
-      pageClassName='page-item'
-      pageLinkClassName='page-link'
-      previousClassName='page-item'
-      previousLinkClassName='page-link'
-      nextClassName='page-item'
-      nextLinkClassName='page-link'
+      containerClassName="pagination"
+      activeClassName="active"
+      pageClassName="page-item"
+      pageLinkClassName="page-link"
+      previousClassName="page-item"
+      previousLinkClassName="page-link"
+      nextClassName="page-item"
+      nextLinkClassName="page-link"
     />
   );
 }

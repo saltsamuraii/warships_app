@@ -19,7 +19,7 @@
     "lintFix": "eslint ./src/**/*.{ts,tsx} --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kirill",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "7.21.0",

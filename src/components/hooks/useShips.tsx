@@ -11,7 +11,7 @@ export default function useShips() {
       setShips(data);
       setIsLoading(false);
     });
-  }, [ isLoading ]);
+  }, []);
 
   const formatedShips = Object.entries(ships).map(([id, { ...rest }]) => ({
     id,
