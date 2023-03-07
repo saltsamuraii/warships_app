@@ -19,6 +19,14 @@ body {
   background: var(--dark-grey);
 }
 
+.light {
+  background-color: var(--light-white);
+}
+
+.dark {
+  background-color: var(--dark-grey);
+}
+
 *,
 *:before,
 *:after {

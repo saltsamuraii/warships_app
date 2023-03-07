@@ -3,16 +3,13 @@ import { Ship } from '../ship';
 import { ShipCard } from '../ship-card';
 import { Pagination } from '../../pagination';
 import './ship-list.css';
+import useShips from '../../hooks/useShips';
 
-interface ShipListProps {
-  ships: Ship[];
-  isLoading: boolean;
-}
-
-export default function ShipList({ ships, isLoading }: ShipListProps) {
+export default function ShipList() {
   const [displayedShips, setDisplayedShips] = useState<Ship[]>([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [shipsPerPage] = useState(6);
+  const { isLoading, ships } = useShips();
 
   useEffect(() => {
     setDisplayedShips(

@@ -8,8 +8,8 @@ export default function useShips() {
 
   useEffect(() => {
     getShips().then((data) => {
-      setIsLoading(!isLoading);
       setShips(data);
+      setIsLoading(false);
     });
   }, [ isLoading ]);
 
